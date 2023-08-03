@@ -1,13 +1,13 @@
 import axios from "axios"
 
-const url: string = 'http://localhost:3344/api/v1/authorRouter'
+const url: string = 'http://localhost:3400/api/v1/'
 
 export const SignUpAuthor = async(data: any) =>{
     try {
  const config: {} = {
     "content-type": "multipart/form-data"
  } 
- return await axios.post(`${url}/sign-up`, data, config).then((res: any)=>{
+ return await axios.post(`${url}/create-user`, data, config).then((res: any)=>{
 
     return res.data.data
  }) 

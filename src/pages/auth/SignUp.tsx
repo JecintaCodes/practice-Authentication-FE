@@ -8,8 +8,6 @@ import { useState } from "react";
 import { SignUpAuthor } from "../../utils/AuthApi";
 
 
-
-
 const SignUp = ()=>{
     const navigate = useNavigate()
 
@@ -36,19 +34,6 @@ const SignUp = ()=>{
     })
 
 
-
-    // const onHandleImage = (e: any) => {
-    //     try {
-    //         const file = e.target.files[0]
-    //         const realImage = URL.createObjectURL(file)
-    //         setImage(realImage)
-    //         setAvatar(file)
-
-    //     } catch (error) {
-    //         console.log(error)
-    //     }
-    // }
-
      const onHandleImage = (e:any)=>{
         try {
             const file = e.target.files[0]
@@ -61,20 +46,6 @@ const SignUp = ()=>{
         }
      }
 
-    // const onSubmit = handleSubmit(async(data: any)=>{
-    //     const {userName, email, password}= data
-    //     const formData = new FormData()
-
-    //     formData.append("name", userName)
-    //     formData.append("email", email)
-    //     formData.append("password", password)
-    //     formData.append("image", avatar)
-
-    //     SignUpAuthor(formData).then(()=>{
-    //         navigate("/sign-in")
-    //     })
-    //     reset()
-    // })
 
         const onSubmit = handleSubmit(async(data:any)=>{
             const {userName, email, password, ConfirmPassword}= data
@@ -86,7 +57,7 @@ const SignUp = ()=>{
             formData.append("Image", avatar)
        
             SignUpAuthor(formData).then(()=>{
-                navigate("/sign-in")
+                navigate("/category")
             })
         })
 
@@ -120,7 +91,7 @@ const SignUp = ()=>{
         <Button>SignUp</Button>
        <Link style={{textDecoration:"none" , color:"var(--appText)"}}
        to="/sign-in">
-       <Button
+       <Button 
         >SignIn</Button>
        </Link>
         </ButtonHolder>
