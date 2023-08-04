@@ -1,9 +1,11 @@
+import {  useNavigate } from "react-router-dom"
 import styled from "styled-components"
 
 
-
-
 const Category = ()=>{
+        const navigate = useNavigate()
+
+
     return(
         <div>
         <Container>
@@ -13,7 +15,9 @@ const Category = ()=>{
         </CatHolder>
        
         <ButtonHolder>
-        <Button>continue</Button>
+        <Button
+       
+        >continue</Button>
         </ButtonHolder>
 
         </Main>

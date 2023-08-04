@@ -5,11 +5,18 @@ import Layout from "../Components/common/Layout";
 import HomePage from "../pages/HomePage";
 import HomeScreen from "../pages/HomeScreen";
 import Category from "../pages/auth/Category";
-
+import ViewFriend from "../pages/ViewFriend";
+import ViewRequest from "../pages/ViewRquest";
+import Friends from "../pages/Friends";
+import CreateArticle from "../pages/CreateArticle";
+import ViewArticles from "../pages/ViewArtcles";
+import Authors from "../pages/Authors";
+import ViewAuthors from "../pages/ViewAuthors";
+import ContentPage from "../pages/ContentPage";
 
 export const mainRoute = createBrowserRouter([
     {
-        path: "/",
+        path: "/signup",
         element:<SignUp/>,
     },
     {
@@ -20,18 +27,50 @@ export const mainRoute = createBrowserRouter([
         path: "/sign-in",
         element:<SignIn/>,
     },
-    {
-        path: "/layout",
-        element:<Layout/>,
-        children:[
-            {
-                index:true,
-                element:<HomePage/>,
-            },
-            {
-                index:true,
-                element:<HomeScreen/>,
-            },
-        ]
-    },
+   {
+    path:"/",
+    element:<Layout/>,
+    children:[
+        {
+            index: true,
+            element:<HomePage/>,
+        },
+        {
+            path:"/homescreen",
+            element:<HomeScreen/>,
+        },
+        {
+            path:"/view-friend",
+            element:<ViewFriend/>,
+        },
+        {
+            path:"/view-request",
+            element:<ViewRequest/>,
+        },
+        {
+            path:"/friends",
+            element:<Friends/>,
+        },
+        {
+            path:"/create-articles",
+            element:<CreateArticle/>,
+        },
+        {
+            path:"/authors",
+            element:<Authors/>,
+        },
+        {
+            path:"/view-authors",
+            element:<ViewAuthors/>,
+        },
+        {
+            path:"/view-authors",
+            element:<ViewAuthors/>,
+        },
+        {
+            path:"/content-page",
+            element:<ContentPage/>,
+        },
+    ]
+   },
 ])

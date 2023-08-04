@@ -7,7 +7,7 @@ const HomePage = ()=>{
         <div>
         <Container>
         <Main>
-        <Text></Text>
+        <Text>HomePage</Text>
         </Main>
         </Container>
         </div>

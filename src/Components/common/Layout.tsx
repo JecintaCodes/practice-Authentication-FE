@@ -24,7 +24,7 @@ const MainContainer = styled.div`
 display: flex;
 width: calc(100vw-200px);
 min-height: 100vh;
-background-color: red;
+
 `;
 const Container = styled.div`
 width: 100vh;

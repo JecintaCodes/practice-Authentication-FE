@@ -12,14 +12,31 @@ const Header = ()=>{
         to="/">
         <span>Home</span>
         </Nav>
+        <Nav to="/create-articles">
+        <span>Create Articles</span>
+        </Nav>
+        <Nav to="/view-articles">
+        <span>View Articles</span>
+        </Nav>
 
+        <Nav to="/authors">
+        <span> Authors</span>
+        </Nav>
         <Nav to="/view-authors">
         <span>View Authors</span>
         </Nav>
-
-        <Nav to="/create-articles">
-        <span>Create Aiticles</span>
+        <Nav to="/friends">
+        <span>Friends</span>
         </Nav>
+        <Nav to="/view-request">
+        <span>View Requests</span>
+        </Nav>
+        <Nav to="/view-friend">
+        <span>View Friends</span>
+        </Nav>
+
+        
+       
 
         <Space/>
 
