@@ -1,5 +1,8 @@
 import styled from "styled-components"
 import pix from "../assets/373.jpg"
+import {BiLike} from "react-icons/bi"
+import {BiDislike} from "react-icons/bi"
+import {AiOutlineHeart} from "react-icons/ai"
 
 const ContentPage = () =>{
     return (
@@ -32,9 +35,15 @@ const ContentPage = () =>{
         the code that implements those systems, and test systems 
         to make sure they meet requirements.
         </Content>
-      
+   
         </ButtonHolder>
 
+        <IconHolder>
+        <span>5 min ago</span>
+        <Like/>
+        <Love/>
+        <Unlike/>
+        </IconHolder>
         </Card>
 
         </CardHolder>
@@ -47,8 +56,30 @@ const ContentPage = () =>{
 export default ContentPage
 
 
+const Unlike = styled(AiOutlineHeart)`
+cursor: pointer;
+`;
+const Love = styled(BiDislike)`
+cursor: pointer;
+`;
+const Like = styled(BiLike)`
+cursor: pointer;
+`;
+const IconHolder = styled.text`
+font-size: 15px;
+display: flex;
+align-items: center;
+gap:20px;
+
+
+span{
+    font-size: 12px;
+}
+`;
 const Content = styled.text`
 margin-top: 20px;
+font-size: 15px;
+
 `;
 
 const Description = styled.div`
