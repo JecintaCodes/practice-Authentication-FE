@@ -8,7 +8,6 @@ import Category from "../pages/auth/Category";
 import ViewFriend from "../pages/ViewFriend";
 import ViewRequest from "../pages/ViewRquest";
 import Friends from "../pages/Friends";
-import CreateArticle from "../pages/CreateArticle";
 import ViewArticles from "../pages/ViewArtcles";
 import Authors from "../pages/Authors";
 import ViewAuthors from "../pages/ViewAuthors";
@@ -51,10 +50,7 @@ export const mainRoute = createBrowserRouter([
             path:"/friends",
             element:<Friends/>,
         },
-        {
-            path:"/create-articles",
-            element:<CreateArticle/>,
-        },
+       
         {
             path:"/authors",
             element:<Authors/>,
