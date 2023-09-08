@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { useForm } from "react-hook-form"
 import * as yup from "yup"
 import { yupResolver } from "@hookform/resolvers/yup"
-import { SignInAuthor } from "../../utils/AuthApi";
+import { SignInUser } from "../../utils/AuthApi";
 
 
 const SignIn = ()=>{
@@ -28,7 +28,7 @@ const SignIn = ()=>{
             formData.append("email", email)
             formData.append("password", password)
 
-            SignInAuthor(formData).then(()=>{
+            SignInUser(formData).then(()=>{
                 navigate('/')
             })
         })
