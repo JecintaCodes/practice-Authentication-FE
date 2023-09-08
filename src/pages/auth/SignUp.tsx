@@ -5,7 +5,7 @@ import * as yup from "yup"
 import { yupResolver } from "@hookform/resolvers/yup"
 import pix from "../../assets/373.jpg"
 import { useState } from "react";
-import { SignUpAuthor } from "../../utils/AuthApi";
+import { SignUpUser } from "../../utils/AuthApi";
 
 
 const SignUp = ()=>{
@@ -56,7 +56,7 @@ const SignUp = ()=>{
             formData.append("password", password)
             formData.append("Image", avatar)
        
-            SignUpAuthor(formData).then(()=>{
+            SignUpUser(formData).then(()=>{
                 navigate("/category")
             })
         })
